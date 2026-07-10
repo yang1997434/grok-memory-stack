@@ -87,6 +87,26 @@ Helper: `python3 ~/.grok/skills/promote-to-vault/scripts/scaffold_entry.py --typ
 - Auto-compact keeps long sessions usable; still `/remember` durable conclusions that must survive a *new* session or Claude consult.  
 - Escape: `grok --no-memory` or `/memory off`.
 
+### Project breakpoints (Claude `/save` bridge)
+
+Claude writes `session_latest.md` under project memory; Grok mirrors at:
+
+`~/.grok/memory/breakpoints/<key>/session_latest.md`  
+Index: `~/.grok/memory/breakpoints/INDEX.md`
+
+| cwd contains | Read on **new** session (before planning work) |
+|--------------|--------------------------------------------------|
+| `/data/Claude/sub2api` | `breakpoints/sub2api/session_latest.md` |
+| `/data/Claude/keleclaw-api` | `breakpoints/keleclaw-api/session_latest.md` |
+| `/data/Claude/la-work` | `breakpoints/la-work/session_latest.md` |
+| `/data/Claude/tavern` | `breakpoints/tavern/session_latest.md` |
+| `/data/Claude` (multi / memory-stack) | `breakpoints/data-claude/session_latest.md` |
+| feishu / flowalpha | see INDEX.md |
+
+**Resume** same Grok session → conversation history is authoritative; breakpoint is optional refresh.  
+**New** session in a project → **must Read** the matching `session_latest.md` and brief open items (≤25 lines mind).  
+On save/收工: rewrite that file with Claude save schema (`Done` / `Open items` / `Blockers` / `Rollback markers`). Do not put secrets in breakpoints.
+
 ## Grok-only notes
 
 - Prompt contrast: `~/.grok/pager.toml` → `scrollback.blocks.prompt.bg = "dark"`.  

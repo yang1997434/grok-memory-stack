@@ -30,3 +30,5 @@
 ## Promote candidates
 
 - (items waiting for vault promotion — clear after promote-to-vault)
+
+- [project breakpoints](breakpoints/INDEX.md) — Claude save 导入的各项目 session_latest;进仓先读
