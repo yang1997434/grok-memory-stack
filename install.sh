@@ -51,6 +51,16 @@ else
   fi
 fi
 
+# skill
+SKILL_SRC="$ROOT/skills/promote-to-vault"
+SKILL_DST="$GROK_HOME/skills/promote-to-vault"
+if [[ -d "$SKILL_SRC" ]]; then
+  mkdir -p "$GROK_HOME/skills"
+  rm -rf "$SKILL_DST"
+  cp -a "$SKILL_SRC" "$SKILL_DST"
+  echo "installed $SKILL_DST"
+fi
+
 echo ""
 echo "Done. Verify with:"
 echo "  grok inspect --json | python3 -c \"import sys,json; d=json.load(sys.stdin); print([x['path'] for x in d.get('projectInstructions',[])])\""

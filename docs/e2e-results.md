@@ -16,3 +16,10 @@ SUMMARY PASS=11 FAIL=0 SKIP=0
 ```
 
 Canary line and e2e session groups were removed after the run.
+
+## P1/P2 add-on (2026-07-11)
+
+- Chinese canary `memory_search`: FOUND_ZH (PASS)
+- `scaffold_entry.py --dry-run`: PASS
+- Real promote to vault then deleted: schema validator pass (warn optional owner only)
+- Cleaned: vault e2e file, index line, /tmp workspace memory

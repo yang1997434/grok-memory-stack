@@ -14,6 +14,7 @@ Thin **Grok Build CLI** memory + constitution adapter for machines that already 
 | `~/.grok/memory/MEMORY.md` | Curated global memory skeleton (only if missing) |
 | `~/.grok/pager.toml` | Prompt bubble `bg=dark` (optional; skip if present) |
 | `~/.grok/config.toml` snippet | `compat.claude.hooks=false` + conservative `[memory]` |
+| `~/.grok/skills/promote-to-vault/` | P2 promote curated memory → vault |
 
 ## Install
 
@@ -31,6 +32,13 @@ Requirements: [Grok Build CLI](https://github.com/xai-org) installed and authent
 grok inspect --json | head
 bash scripts/e2e-verify.sh   # needs network + grok auth for headless canary tests
 ```
+
+## P1 / P2 (executor mode)
+
+Grok is the **primary executor**; Claude is a **consultant** for heavy planning.
+Shared facts must be **promoted to vault** (`promote-to-vault` skill) so Claude can retrieve them.
+
+See [docs/p1-p2.md](docs/p1-p2.md).
 
 ## Daily usage
 

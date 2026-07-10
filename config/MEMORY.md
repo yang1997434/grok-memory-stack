@@ -1,26 +1,27 @@
 # Global memory (Grok curated)
 
-> Hot layer for Grok only. Constitution lives in `~/.claude/CLAUDE.md` + rules.
-> Shared long-form knowledge lives in vault `~/data/knowledge-base/` (qmd `kb-yp`).
+> Hot layer for **Grok-as-executor**. Constitution: `~/.claude/CLAUDE.md` + rules.  
+> Shared library for Claude consult + all agents: vault `~/data/knowledge-base/` (qmd `kb-yp`).  
 > Keep entries short (≤2 lines). Prefer pointers over essays.
 
 ## Self-instructions (do not delete)
 
 1. Do **not** store constitution/process here — SoT is `~/.claude/`. Here: facts, Grok-only prefs, vault pointers.
-2. Retrieval: memory first → on miss/conflict/high-value, `qmd --index kb-yp search "…" -c kb -n 5` (not `qmd query`).
-3. Promote to vault when cross-AI reusable + verified (or user asks): pitfall/pattern/decision; then leave a pointer, don't dual-write full text.
+2. **Read (P1):** memory first; **also qmd** on cross-AI / prod / architecture / pitfall / conflict / 调研·决策 / thin plans. Use `qmd --index kb-yp search` (not `query`). Mix 中文 + English identifiers in queries.
+3. **Promote (P2):** cross-AI prefs, verified prod incidents, multi-repo architecture, reusable pitfall/pattern, or user asks for Claude continuity → skill `promote-to-vault` → vault file + index line → leave pointer here only.
 
 ## Grok-only
 
-- Prefer one long session per project; `/rename` by project; switch sessions with Ctrl+S. Memory is secondary to resume for same-project continuity.
-- Ghostty: use dark theme for Grok TUI; pager prompt `bg = "dark"` if input bar is washed out.
-- P0 write policy: confirmed `/remember` only; manual `/flush`; auto session-save and auto-dream are off in config.
+- Role: Grok executes; Claude consults on heavy planning/reasoning. Promote shared conclusions to vault.
+- Sessions: one long session per project; `/rename`; Ctrl+S switch. Memory supplements new sessions, not same-session resume.
+- P0 write policy remains: confirmed `/remember`; manual `/flush`; auto session-save and auto-dream off.
+- Ghostty dark + pager prompt `bg=dark` for input readability.
 
 ## From vault / Claude (pointers only)
 
-- Pitfalls library: `~/.claude/rules/pitfalls.md` + vault `_LLM_Memory/global/pitfall/`
-- Memory architecture notes: vault `2026-07-02-记忆系统盘点与修复.md`, `2026-07-09-Codex能力对齐调研-记忆与skills系统对比与迁移方案.md`
-- Fleet/workflow feedback archived 2026-07-10 — do not revive multi-agent fleet defaults without checking vault feedback_workflow_fleet_defaults
+- Pitfalls: `~/.claude/rules/pitfalls.md` + vault `_LLM_Memory/global/pitfall/`
+- Conventions: `ai-memory-stack/docs/conventions.md` (under `/data/Claude/ai-memory-stack` or clone)
+- Stack install: `https://github.com/yang1997434/grok-memory-stack`
 
 ## Cross-project facts
 
@@ -28,4 +29,4 @@
 
 ## Promote candidates
 
-- (move verified cross-AI items to vault; leave pointer here)
+- (items waiting for vault promotion — clear after promote-to-vault)
