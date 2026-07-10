@@ -3,9 +3,11 @@ name: promote-to-vault
 description: >
   Promote a curated Grok memory fact into the shared Obsidian vault
   (_LLM_Memory/global) with proper schema, index line, and leave a pointer
-  in Grok MEMORY.md. Use when: user says 晋升/记到知识库/给 Claude 用/promote
-  to vault; cross-AI pitfall or decision; verified prod incident; architecture
-  decision other agents need. Do NOT use for Grok-only UI prefs or unverified notes.
+  in Grok MEMORY.md. Use when user wants shared library write — any of:
+  晋升/晋升到知识库/加到知识库/加入知识库/加入了知识库/记到知识库/写进知识库/
+  同步到 vault/给 Claude 用/promote to vault / add to knowledge base.
+  Also for cross-AI pitfall, verified prod incident, architecture decisions.
+  Do NOT use for Grok-only UI prefs or unverified notes.
 ---
 
 # promote-to-vault

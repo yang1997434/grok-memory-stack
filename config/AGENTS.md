@@ -23,7 +23,7 @@ Vault: `~/data/knowledge-base/` · qmd: `--index kb-yp -c kb` · schema: `ai-mem
 1. **Not the constitution.** Facts, Grok-only prefs, vault pointers only.
 2. **Read waterfall (P1)** — see below.
 3. **Write waterfall** — confirmed `/remember` or explicit「记住…」; manual `/flush` for digests. Auto session-save / dream stay off in config.
-4. **Promote (P2)** — when criteria match, run skill `promote-to-vault` (or follow its steps). Never promote raw session logs.
+4. **Promote (P2)** — when criteria match **or** user says any of: 晋升 / 加到知识库 / 加入知识库 / 加入了知识库 / 记到知识库 / 写进知识库 / 同步到 vault / 给 Claude 用 / promote to vault — run skill `promote-to-vault` (or its steps). Never promote raw session logs.
 
 ### Read waterfall (P1)
 

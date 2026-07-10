@@ -8,7 +8,7 @@
 
 1. Do **not** store constitution/process here — SoT is `~/.claude/`. Here: facts, Grok-only prefs, vault pointers.
 2. **Read (P1):** memory first; **also qmd** on cross-AI / prod / architecture / pitfall / conflict / 调研·决策 / thin plans. Use `qmd --index kb-yp search` (not `query`). Mix 中文 + English identifiers in queries.
-3. **Promote (P2):** cross-AI prefs, verified prod incidents, multi-repo architecture, reusable pitfall/pattern, or user asks for Claude continuity → skill `promote-to-vault` → vault file + index line → leave pointer here only.
+3. **Promote (P2):** cross-AI prefs, verified prod incidents, multi-repo architecture, reusable pitfall/pattern, or user phrasing like 晋升/加到知识库/加入知识库/记到知识库/写进知识库/给 Claude 用 → skill `promote-to-vault` → vault file + index line → leave pointer here only.
 
 ## Grok-only
 
