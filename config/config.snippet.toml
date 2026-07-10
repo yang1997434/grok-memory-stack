@@ -1,0 +1,33 @@
+# Merge into ~/.grok/config.toml (Grok memory-stack P0)
+
+[compat.claude]
+agents = true
+rules = true
+skills = true
+mcps = true
+hooks = false
+
+[memory]
+enabled = true
+
+[memory.session]
+save_on_end = false
+
+[memory.watcher]
+enabled = true
+
+[memory.search]
+max_results = 6
+min_score = 0.35
+
+[memory.initial_injection]
+enabled = true
+min_score = 0.35
+
+[memory.dream]
+enabled = false
+min_hours = 4
+min_sessions = 3
+
+[compaction.memory_flush]
+enabled = false

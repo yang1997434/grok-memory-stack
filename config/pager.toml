@@ -1,0 +1,9 @@
+# Fix low-contrast user input / prompt bubbles (light bg + light text).
+# Docs: ~/.grok/docs/user-guide/06-theming.md — [scrollback.blocks.prompt]
+
+[scrollback.blocks.prompt]
+# was default "light" → grayish-white overlay, hard to read typed text
+bg = "dark"
+invert = false
+show_prefix = true
+vpad = true
